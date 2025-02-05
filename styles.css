@@ -726,5 +726,25 @@ img {
         max-width: 300px;
     }
 }
+/* 🔹 Arreglo de la imagen de perfil en móviles */
+@media (max-width: 768px) {
+    header {
+        height: auto; /* Ajustar la altura automática según el contenido */
+        padding-top: 50px; /* Espacio superior para evitar que la imagen se corte */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
+    .profile-photo {
+        margin-top: 0; /* Eliminar el margen negativo que la empuja hacia arriba */
+        width: 180px; /* Reducir el tamaño en móviles */
+        height: 180px;
+    }
+
+    header .presentation-content h1 {
+        font-size: 2rem; /* Ajustar tamaño del texto en móviles */
+    }
+}
 
