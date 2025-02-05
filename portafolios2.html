@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iván Mejías - Portafolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Luces futuristas animadas en el fondo -->
+    <div class="background-lights">
+        <div class="light-strip diagonal"></div>
+        <div class="light-strip horizontal"></div>
+        <div class="light-strip diagonal-reverse"></div>
+    </div>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#hobbies">Sobre mí</a></li>
+            <li><a href="#tecnologias">Tecnologías</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#Descargas">CV</a></li>
+            <li class="dropdown">
+                <a href="#cv">Contacto</a>
+                <div class="dropdown-content">
+                    <a href="https://www.linkedin.com/in/iv%C3%A1n-mej%C3%ADas-morales/" target="_blank" class="dropdown-link">LinkedIn</a>
+                    <a href="https://github.com/IvanAlexisMejias" target="_blank" class="dropdown-link">GitHub</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Presentación -->
+    <header id="inicio">
+        <div class="presentation-container">
+            <img src="mi_foto3.JPG" alt="Iván Mejías" class="profile-photo">
+            <div class="presentation-content">
+                <h1>Iván Mejías</h1>
+                <p><bold>ivan.mejiasm@gmail.com</bold></p>
+                <p>Desarrollador Full Stack | Productor Musical | Fisico Autodidacta </p>
+                <p> Certificados: </p>
+                <ul>
+                    <li class="linkcer"><a href="certificados/Certificado_Ranking Egreso - copia.pdf" target="_blank" >TOP 5 certificado Ranking Egreso INACAP</a></li>
+                    <li class="linkcer"><a href="certificados/Certificado_Desarrollador FullStack - copia.pdf" target="_blank" >Programador Full Stack</a></li>
+                    <li class="linkcer"><a href="certificados/EF SET Certificate.pdf" target="_blank" >INGLES B2   (Intermedio- Avanzado)</a></li>
+                    <li class="linkcer"><a href="certificados/Certificado_Desarrollo Agil - copia.pdf" target="_blank" >Desarrollo Agil</a></li>
+                    <li class="linkcer"><a href="certificados/Certificado_Desarrollo de Aplicaciones - copia.pdf" target="_blank" >Desarrollo básico de aplicaciones</a></li>
+                    <li class="linkcer"><a href="certificados/Certificado_Gestion Base de Datos - copia.pdf" target="_blank" >Gestión en Bases de Datos</a></li>
+                    <li class="linkcer"><a href="certificados/Certificado_Soporte Computacional - copia.pdf" target="_blank" >Soporte computacional</a></li>
+                </ul>
+            </div>
+            <a href="#proyectos" class="btn" id="btnMisProyectos">Ver Mis Proyectos</a>
+        </div>
+        <div class="background-animation"></div>
+    </header>
+
+    
+
+    <!-- Proyectos -->
+    <section id="proyectos">
+        <h2 class="section-title">Mis Proyectos</h2>
+        <div class="proyectos-container">
+
+            <!-- Proyecto 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="Proyecto1v5.jpg" alt="Sensor de Temperatura">
+                </div>
+                <div class="project-content">
+                    <h3>Sensor de Temperatura a Tiempo Real</h3>
+                    <p class="project-description">
+                        Este proyecto utiliza tecnologías modernas para monitorear la temperatura en tiempo real.
+                    </p>
+                    <div class="hidden-description">
+                        Esta es una aplicación web en la cual el usuario se registra con un correo, luego debe logearse donde entra un a un menu principal<br>
+                        Donde Vera un Grafico a tiempo real de la temperatura que se actualiza cada 5 segundos, El usuario establece un umbral que se marca en el grafico<br>
+                        Cada vez que la temperatura sobrepase el Umbral establecido, el usuario sera notificado en su Email (con el cual se registro)<br>
+                    </div>
+                    <ul class="project-tech">
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <div class="project-buttons">
+                        <a href="#" class="btn">GitHub</a>
+                        <button class="btn toggle-more">Ver Más</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="Proyecto2.jpg" alt="Tarificación Telefónica">
+                </div>
+                <div class="project-content">
+                    <h3>Sistema de Tarificación Telefónica</h3>
+                    <p class="project-description">
+                        Aplicación móvil diseñada para calcular tarifas telefónicas de forma eficiente.
+                    </p>
+                    <div class="hidden-description">
+                        Desarrollado con <b>Kotlin</b> y <b>Android Studio</b>, este sistema utiliza <b>Firebase</b> para almacenamiento y autenticación.<br>
+                        En esta aplicacion para Android, El usuario debe registrarse, y ceder permisos de informacion de llamadas,cada vez que el usuario reciba <br>
+                        una llamada, La aplicacion lo registrara en Fire base y devolvera a la app la informacion completa de la llamada (numero, fecha, duracion)<br>
+                        ademas de una tarificacion ficcticia en CLP's de la llamada
+                    </div>
+                    <ul class="project-tech">
+                        <li>Kotlin</li>
+                        <li>Java</li>
+                        <li>Android Studio</li>
+                        <li>Firebase</li>
+                    </ul>
+                    <div class="project-buttons">
+                        <a href="#" class="btn">GitHub</a>
+                        <button class="btn toggle-more">Ver Más</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 3 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="Proyecto3.jpg" alt="Astrolocos">
+                </div>
+                <div class="project-content">
+                    <h3>Astrolocos</h3>
+                    <p class="project-description">
+                        Página web educativa con diseño 3D para explorar conceptos de astronomía y física.
+                    </p>
+                    <div class="hidden-description">
+                        Desarrollado con <b>HTML5</b>, <b>Three.js</b>, y <b>CSS3</b>, este proyecto destaca por su interactividad visual. <br>
+                        Este es mi proyecto mas personal ya que soy un aficionado de la Astrologia y la Fisica, por lo cual cree una pagina web <br>
+                        con informacion sobre nuestro sistema solar, ademas de que me ayudo a reforzar mis conocimientos del 3D, en un apartado <br>
+                        Tiene una animacion  interactiva de la Tierra en 3D
+                    </div>
+                    <ul class="project-tech">
+                        <li>HTML5</li>
+                        <li>JavaScript</li>
+                        <li>CSS3</li>
+                        <li>Three.Js</li>
+                    </ul>
+                    <div class="project-buttons">
+                        <a href="#" class="btn">GitHub</a>
+                        <button class="btn toggle-more">Ver Más</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Tecnologías -->
+    <section id="tecnologias">
+        <h2 class="section-title">Tecnologías</h2>
+        <div class="tech-category">
+            <h3>Frontend</h3>
+            <div class="tech-bar">
+                <img src="HTML5_logo.png" alt="HTML5 Icon" class="icon">
+                <span>HTML5</span>
+                <div class="bar"><div class="progress html"data-percent="90"></div></div>
+            </div>
+            <div class="tech-bar">
+                <img src="CSS3_logo.png" alt="HTML5 Icon" class="icon">
+                <span>CSS3</span>
+                <div class="bar"><div class="progress css"data-percent="80"></div></div>
+            </div>
+            <div class="tech-bar">
+                <img src="JavaScript_logo.png" alt="HTML5 Icon" class="icon">
+                <span>JavaScript</span>
+                <div class="bar"><div class="progress Js"data-percent="65"></div></div>
+            </div>
+        </div>
+        <div class="tech-category">
+            <h3>Backend</h3>
+            <div class="tech-bar">
+                <img src="Python_logo.png" alt="HTML5 Icon" class="icon">
+                <span>Python</span>
+                <div class="bar"><div class="progress python" data-percent="85"></div></div>
+            </div>
+            <div class="tech-bar">
+                <img src="Java_logo.png" alt="HTML5 Icon" class="icon">
+                <span>Java (aprendiendo)</span>
+                <div class="bar"><div class="progress Java"data-percent="25"></div></div>
+            </div>
+        </div>
+        <div class="tech-category">
+            <h3>Bases de Datos</h3>
+            <div class="tech-bar">
+                <img src="mysql_logo.png" alt="HTML5 Icon" class="icon">
+                <span>MySql</span>
+                <div class="bar"><div class="progress MySql"data-percent="72"></div></div>
+            </div>
+            <div class="tech-bar">
+                <img src="SQLite_Logo.png" alt="HTML5 Icon" class="icon">
+                <span>SQLite</span>
+                <div class="bar"><div class="progress SQLite"data-percent="62"></div></div>
+            </div>
+            <div class="tech-bar">
+                <img src="MongoDB_logo.png" alt="HTML5 Icon" class="icon">
+                <span>Mongo DB</span>
+                <div class="bar"><div class="progress MongoDB"data-percent="66"></div></div>
+            </div>
+        </div>
+        <div class="tech-category">
+            <h3>Frameworks</h3>
+            <div class="tech-bar">
+                <img src="Django_logo.png" alt="HTML5 Icon" class="icon">
+                <span>Django</span>
+                <div class="bar"><div class="progress Django"data-percent="68"></div></div>
+            </div>
+            <div class="tech-bar">
+                <img src="React_logo.png" alt="HTML5 Icon" class="icon">
+                <span>React</span>
+                <div class="bar"><div class="progress React"data-percent="75"></div></div>
+            </div>
+            <div class="tech-bar">
+                <img src="Tailwind_logo.png" alt="HTML5 Icon" class="icon">
+                <span>TailWind (aprendiendo)</span>
+                <div class="bar"><div class="progress TailWind" data-percent="20"></div></div>
+            </div>
+            <div class="tech-bar">
+                <img src="Flutter_logo.png" alt="HTML5 Icon" class="icon">
+                <span>Flutter (explorando)</span>
+                <div class="bar"><div class="progress Flutter"data-percent="9"></div></div>
+            </div>
+        </div>
+        <div class="tech-category">
+            <h3>Diseño</h3>
+            <div class="tech-bar">
+                <img src="StarUML_logo.png" alt="HTML5 Icon" class="icon">
+                <span>StarUml</span>
+                <div class="bar"><div class="progress StarUml" data-percent="70"></div></div>
+            </div>
+            <div class="tech-bar">
+                <img src="Figma_logo.png" alt="HTML5 Icon" class="icon">
+                <span>Figma</span>
+                <div class="bar"><div class="progress Figma"data-percent="62"></div></div>
+            </div>
+        </div>
+
+        <div class ="CircularProgress">
+            <div class="soft-skill">
+                <div class="circle" data-percentage="90">
+                    <span class="percent">90%</span>
+                </div>
+                <p>Trabajo en equipo</p>
+            </div>
+            
+            <div class="soft-skill">
+                <div class="circle" data-percentage="85">
+                    <span class="percent">85%</span>
+                </div>
+                <p>Liderazgo</p>
+            </div>
+            
+            <div class="soft-skill">
+                <div class="circle" data-percentage="80">
+                    <span class="percent">80%</span>
+                </div>
+                <p>Resolución de problemas</p>
+            </div>
+            
+            <div class="soft-skill">
+                <div class="circle" data-percentage="75">
+                    <span class="percent">75%</span>
+                </div>
+                <p>Adaptabilidad</p>
+            </div>
+            
+            <div class="soft-skill">
+                <div class="circle" data-percentage="85">
+                    <span class="percent">85%</span>
+                </div>
+                <p>Comunicación efectiva</p>
+            </div>
+        </div>
+        <!-- Agregar más categorías similares -->
+    </section>
+
+    <!-- Hobbies -->
+    <section id="hobbies">
+        <h2 class="section-title">Hobbies</h2>
+        <p>Una seccion mucho mas personal, me encantan los desafios, por lo que me apasionan estas disiplinas.</p>
+        <div class="hobbies-container">
+            <div class="hobby-card">
+                <img src="Calistenia.jfif" alt="Calistenia">
+                <h3>Calistenia</h3>
+            </div>
+            <div class="hobby-card">
+                <img src="Piano.jfif" alt="Piano">
+                <h3>Piano</h3>
+            </div>
+            <div class="hobby-card">
+                <img src="Guitarra.jfif" alt="Guitarra">
+                <h3>Guitarra</h3>
+            </div>
+            <div class="hobby-card">
+                <img src="Produccion.jfif" alt="Produccion">
+                <h3>Produccion</h3>
+            </div>
+            <div class="hobby-card">
+                <img src="Fisicav4.JPG" alt="Fisica">
+                <h3>Fisica</h3>
+            </div>
+            <div class="hobby-card">
+                <img src="Slackline.jfif" alt="Slackline">
+                <h3>Slackline</h3>
+            </div>
+            <div class="hobby-card">
+                <img src="MasMusica.jfif" alt="MasMusica">
+                <h3>Mas Musica</h3>
+            </div>
+            <div class="hobby-card">
+                <img src="MasFisica.jfif" alt="MasFisica">
+                <h3>Mas fisica</h3>
+            </div>
+            <!-- Agregar más hobbies -->
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios">
+        <h2 class="section-title">Testimonios</h2>
+        <div class="testimonios-container">
+            <div class="testimonial-card">
+                <img src="persona1.jpg" alt="Persona 1">
+                <p>"El es un estudiante destacado, perfeccionista y siempre dispuesto a ayudar. Su dedicación y apoyo fueron clave en momentos desafiantes durante la carrera." <br> ""Combina habilidades técnicas excepcionales con una gran calidad humana, lo que lo convierte en un profesional valioso y un compañero excepcional.""</p>
+                <h3>Patricia Llanquileo</h3>
+                <p>Top 6 Ranking Egreso INACAP</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="persona2.jpg" alt="Persona 2">
+                <p>"Es un gran lider de equipo, logra ver el potencial y capacidades de los demas para adaptalo al proyecto a realizar, una persona optimista, motivada, resolutiva y que le gustan los desafios"</p>
+                <h3>- Marina Velasquez</h3>
+                <p>Top 4 Ranking Egreso INACAP</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="Persona3.jpeg" alt="Persona 3">
+                <p>"
+                    Iván Mejías destaca por su innovación, actualización constante y liderazgo en equipo, asegurando el éxito del proyecto y el crecimiento de cada integrante."</p>
+                <h3>- Mathias Muñoz </h3>
+                <p>Top 9 Ranking Egreso INACAP</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="Persona4.jpeg" alt="Persona 2">
+                <p>"Iván es una desarrollador extraordinario con una gran imaginación en crear nuevos códigos y solucionando problemas"<br>
+                "Es demasiado exigente, Trabajar con el fue una gran experiencia  para superarse a uno mismo"</p>
+                <h3>- Rodrigo Cerda</h3>
+                <p>Analista QA en Sonda S.A.</p>
+
+            </div>
+            <div class="testimonial-card">
+                <img src="Persona5.jpg" alt="Persona 2">
+                <p>"Es un profesional dedicado y motivado, que aborda cada proyecto con el maximo profesionalismo. Siempre está dispuesto a ayudar y se mantienerse aprendiendo. Trabajar con él fue una experiencia enriquecedora profesional y personalmente."</p>
+                <h3>- Mauricio Robles</h3>
+                <p>Asistente de Operaciones Comerciales Mall Arauco Maipú</p>
+            </div>
+            <!-- Agregar más testimonios -->
+        </div>
+    </section>
+    <div id="Descargas">
+        <a href="certificados/CV Iván Mejías.pdf" download="IvanMejias_CV">
+            <button class="btn" id="DownloadCV">Descargar CV</button>
+        </a>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Iván Mejías - Todos los derechos reservados</p>
+            <div class="social-icons">
+                <a href="#"><img src="github-icon.png" alt="GitHub"></a>
+                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

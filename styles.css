@@ -1,0 +1,625 @@
+/* General */
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.linkcer:hover{
+    color: cyan;
+    text-shadow: 0 0 8px cyan;
+    transform: scale(1.15);
+}
+
+.linkcer::after{
+    transform: scale(1.5);
+    color: cyan;
+}
+
+.btn {
+    background-color: #0f0;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+    cursor: pointer;
+}
+
+#btnMisProyectos{
+    margin-top: 1000px;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: #0c0;
+}
+
+/* Barra de navegación */
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: cyan;
+    text-shadow: 0 0 8px cyan;
+}
+
+/* Dropdown en CV */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+}
+
+.dropdown-content a:hover {
+    color: cyan;
+    text-shadow: 0 0 8px cyan;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Header - Presentación */
+header {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #000;
+}
+
+header .presentation-container {
+    z-index: 2;
+}
+
+/*header .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-bottom: 20px;
+}*/
+
+.profile-photo {
+    margin-top: -200px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid cyan;
+    box-shadow: 0 0 20px cyan;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 30px white;
+}
+
+header .presentation-content h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header .background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0f0, #0ff, #f0f);
+    animation: moveBg 5s infinite alternate;
+    opacity: 0.1;
+}
+
+@keyframes moveBg {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Proyectos */
+#proyectos {
+    padding: 50px 10%;
+}
+
+.project-card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #111;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #0f0;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.project-content h3 {
+    margin: 0 0 10px;
+}
+
+.project-description {
+    margin-bottom: 10px;
+}
+
+.hidden-description {
+    display: none;
+    margin-bottom: 10px;
+    color: #aaa;
+}
+
+.hidden-description.expanded {
+    display: block; /* Mostrar contenido */
+    opacity: 1;
+    max-height: 500px; /* Ajustar al tamaño necesario */
+    color: #ffffff;    
+}
+
+.project-content .btn {
+    margin-right: 10px;
+}
+
+.project-buttons .toggle-more {
+    background-color: #222;
+    color: #0f0;
+}
+
+.project-buttons .toggle-more:hover {
+    background-color: #333;
+    color: #0c0;
+}
+
+/* Tecnologías */
+#tecnologias {
+    padding: 50px 10%;
+}
+
+.tech-category {
+    margin-bottom: 30px;
+}
+
+.tech-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.tech-bar img.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.tech-bar span {
+    flex: 1;
+    width: 100px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.bar {
+    flex: 3;
+    background-color: #222;
+    border-radius: 5px;
+    margin-left: 10px;
+    height: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 126, 95, 0.8);
+    transition: width 0.3s ease-in-out;
+    position: relative;
+    animation: glow 7s ease-in-out forwards;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 126, 95, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 126, 95, 1);
+    }
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 150%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+.progress::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-45deg);
+    animation: shine 5s ease-in-out infinite;
+}
+
+.percentage {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 14px;
+}
+
+.progress.html {
+    background-color: #e34f26;
+    width: 90%;
+}
+
+.progress.css {
+    background-color: #264de4;
+    width: 80%;
+}
+
+.progress.Js {
+    background-color: #c6ee34;
+    width: 65%;
+}
+
+.progress.python {
+    background-color: #2a069f;
+    width: 85%;
+}
+
+.progress.Java {
+    background-color: #f3edec;
+    width: 25%;
+}
+
+.progress.MySql {
+    background-color: #3d2c9e;
+    width: 72%;
+}
+
+.progress.SQLite {
+    background-color: #18003b;
+    width: 62%;
+}
+
+.progress.MongoDB {
+    background-color: #67b30a;
+    width: 66%;
+}
+
+.progress.Django {
+    background-color: #487e05;
+    width: 68%;
+}
+
+.progress.React {
+    background-color: #19bdc3;
+    width: 75%;
+}
+
+.progress.TailWind {
+    background-color: #0ee98e;
+    width: 20%;
+}
+
+.progress.Flutter {
+    background-color: #3129cd;
+    width: 9%;
+}
+
+.progress.StarUml {
+    background-color: #fef43d;
+    width: 70%;
+}
+
+.progress.Figma {
+    background-color: #821fac;
+    width: 62%;
+}
+
+.progress-bar {
+    transition: width 2s ease-in-out;
+}
+
+.CircularProgress{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.soft-skill {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+    margin: 20px;
+    color: #00ff00;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: conic-gradient(rgb(6, 196, 53) calc(var(--percentage) * 1%), #03000000 calc(var(--percentage) * 1%));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    --percentage: 0;
+    animation: fill-circle 1.5s forwards;
+}
+
+.circle .percent {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+@keyframes fill-circle {
+    from {
+        --percentage: 0;
+    }
+    to {
+        --percentage: var(data-percentage);
+    }
+}
+
+/*.circle::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-45deg);
+    animation: shine 5s ease-in-out infinite;
+}*/
+
+
+/* Hobbies */
+#hobbies {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.hobbies-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hobby-card {
+    background-color: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hobby-card img {
+    width: 100%;
+    height: 250px; /* Ajusta la altura fija según prefieras */
+    object-fit: cover; /* Asegura que la imagen llene el espacio manteniendo la proporción */
+    border-radius: 5px; /* Opcional: suaviza las esquinas */
+}
+
+.hobby-card h3 {
+    margin: 10px 0;
+}
+
+.hobby-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #0f0;
+}
+
+/* Testimonios */
+#testimonios {
+    padding: 50px 10%;
+}
+
+.testimonios-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: #111;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid #0f0;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #0f0;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+.social-icons{
+    color: #fff;
+}
+footer .social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    filter: invert(100%);
+    transition: transform 0.2s, filter 0.2s;
+    color: #2a12ae;
+}
+
+footer .social-icons img:hover {
+    transform: scale(1.2);
+    filter: invert(50%);
+}
+
+/* Fondo futurista con luces animadas */
+ .background-lights {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.light-strip {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, red, blue, green, yellow);
+    background-size: 400% 400%;
+    animation: rgb-flow 4s infinite linear, move 6s infinite linear;
+}
+
+.diagonal {
+    transform: rotate(45deg);
+    top: -10%;
+    animation-direction: normal;
+}
+
+.diagonal-reverse {
+    transform: rotate(-45deg);
+    bottom: -10%;
+    animation-direction: reverse;
+}
+
+.horizontal {
+    top: 50%;
+    height: 6px;
+    opacity: 0.7;
+}
+
+#Descargas{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#DownloadCV{
+    width: 400px;
+    height: 100px;
+    font-size: larger;
+    color: #fefcfc;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Animaciones */
+@keyframes rgb-flow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+} 
