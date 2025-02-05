@@ -623,3 +623,108 @@ footer .social-icons img:hover {
         transform: translateX(100%) rotate(45deg);
     }
 } 
+
+/* cambios responsibidad */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: black; /* Fondo negro para mejor visibilidad */
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 25px;
+        color: white;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .certificaciones {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 768px) {
+    .CircularProgress {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .soft-skill {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .CircularProgress {
+        flex-direction: column;
+    }
+
+    .circle {
+        width: 70px;
+        height: 70px;
+    }
+
+    .soft-skill {
+        font-size: 12px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .graficos-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hobbies-container, .testimonios-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hobby-card, .testimonial-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
