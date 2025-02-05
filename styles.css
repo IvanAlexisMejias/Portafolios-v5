@@ -133,7 +133,7 @@ header .presentation-container {
 }*/
 
 .profile-photo {
-    margin-top: -200px;
+    
     width: 250px;
     height: 250px;
     border-radius: 50%;
@@ -729,22 +729,29 @@ img {
 /* 🔹 Arreglo de la imagen de perfil en móviles */
 @media (max-width: 768px) {
     header {
-        height: auto; /* Ajustar la altura automática según el contenido */
-        padding-top: 50px; /* Espacio superior para evitar que la imagen se corte */
+        height: auto; /* Ajusta la altura según el contenido */
+        padding: 20px 10px; /* Agrega espacio para evitar recortes */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-align: center;
     }
 
     .profile-photo {
-        margin-top: 0; /* Eliminar el margen negativo que la empuja hacia arriba */
-        width: 180px; /* Reducir el tamaño en móviles */
-        height: 180px;
+        margin-top: 20px; /* Agrega un pequeño margen en lugar de negativo */
+        width: 150px; /* Reduce el tamaño en móviles */
+        height: 150px;
+        border-radius: 50%;
+    }
+
+    .presentation-content {
+        padding-top: 20px; /* Asegura que el contenido no esté pegado a la imagen */
     }
 
     header .presentation-content h1 {
-        font-size: 2rem; /* Ajustar tamaño del texto en móviles */
+        font-size: 2rem; /* Reduce el tamaño del texto */
     }
 }
+
 
