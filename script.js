@@ -138,3 +138,31 @@ document.querySelectorAll('.dropdown-link').forEach(link => {
       event.preventDefault(); // Evita el comportamiento predeterminado
       window.open(this.href, '_blank'); // Abre el enlace en una nueva pestaña
 })});
+
+const githubButtons = document.querySelectorAll(".btn.github");
+
+githubButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const projectCard = button.closest(".project-card");
+    const repoUrl = projectCard.getAttribute("data-github");
+    
+    if (repoUrl === "astrolocos") {
+      showToast("Este repositorio estará disponible próximamente en GitHub.");
+    } else {
+      window.open(repoUrl, "_blank");
+    }
+  });
+});
+
+// Función para mostrar mensajes tipo toast
+function showToast(message) {
+  const toast = document.createElement("div");
+  toast.classList.add("toast-message");
+  toast.textContent = message;
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add("fade-out");
+    setTimeout(() => toast.remove(), 500);
+  }, 3000);
+}
