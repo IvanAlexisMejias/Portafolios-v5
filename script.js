@@ -146,7 +146,7 @@ githubButtons.forEach(button => {
     const projectCard = button.closest(".project-card");
     const repoUrl = projectCard.getAttribute("data-github");
     
-    if (repoUrl === "astrolocos") {
+    if (repoUrl === "astrolocxs") {
       showToast("Este repositorio estará disponible próximamente en GitHub.");
     } else {
       window.open(repoUrl, "_blank");
